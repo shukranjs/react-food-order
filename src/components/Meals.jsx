@@ -19,7 +19,7 @@ export default function Meals() {
     <ul id="meals">
       {" "}
       {loadedmeals.map((meal) => (
-        <MealItem meal={meal} />
+        <MealItem meal={meal} key={meal.id}/>
       ))}
     </ul>
   );
