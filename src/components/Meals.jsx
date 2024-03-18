@@ -11,9 +11,12 @@ export default function Meals() {
   console.log(isLoading, "sssss");
 
   if (isLoading) {
-    return <p>Fetching meals...</p>;
+    return <p className="center">Fetching meals...</p>;
   }
 
+  if (error) {
+    <Error title="Failed to fetch data!" message={error}></Error>;
+  }
   return (
     <ul id="meals">
       {loadedMeals.map((meal) => (
